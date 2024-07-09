@@ -1,0 +1,87 @@
+section {
+  text-align: center;
+}
+.game--container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 306px;
+  margin: 50px auto;
+}
+.cell {
+  font-family: "sans serif";
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 5px #6b6b6b;
+  border: 2px solid #3d3d3d;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 100px;
+  background-color: rgb(217, 216, 216);
+}
+
+.game--restart {
+  background-color: rgb(217, 216, 216);
+  padding: 10px;
+  border-radius: 50px;
+  position: relative;
+}
+
+#game-container-box {
+  height: 700px;
+  width: 500px;
+  background-color: rgb(237, 237, 237);
+  margin: auto;
+  padding-top: 50px;
+  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.379);
+}
+
+#player-icon-selector {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.player-selector {
+  background-color: rgb(247, 244, 244);
+}
+
+#inlaid-box {
+  width: 400px;
+  height: 380px;
+  background-color: rgba(255, 255, 255, 0.791);
+  margin: auto;
+  padding-top: 1px;
+  padding-bottom: 30px;
+  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.379) inset;
+}
+
+.game--status {
+  margin-top: 30px;
+
+  animation-name: status-keyframes;
+  animation-duration: 1s;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-direction: forwards;
+  animation-delay: 0s;
+}
+
+#game-status-box {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(237, 237, 237);
+}
+
+@keyframes status-keyframes {
+  from {
+    color: red;
+    font-size: 28px;
+  }
+  50% {
+    color: rgb(123, 0, 0);
+  }
+
+  to {
+    color: red;
+    font-size: 28px;
+  }
+}
