@@ -1,4 +1,4 @@
-let playerTwoState = "X";
+let playerTwoState = "O";
 const player2 = document.getElementById("player2");
 player2.addEventListener("change", function (e) {
   playerTwoState = e.target.value;
@@ -20,9 +20,9 @@ let currentPlayer = playerOneState;
 
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
-const winningMessage = () => `"${currentPlayer}" WON!!`;
-const drawMessage = () => `Game ended in a draw!`;
-const currentPlayerTurn = () => `"${currentPlayer}" GO ALREADY!!`;
+const winningMessage = () => `${currentPlayer} won!`;
+const drawMessage = () => `It's a draw!`;
+const currentPlayerTurn = () => `it's ${currentPlayer}'s turn.`;
 
 statusDisplay.innerHTML = currentPlayerTurn() || "";
 
@@ -99,8 +99,7 @@ function handleCellClick(clickedCellEvent) {
 
 function handleRestartGame() {
   if (playerOneState === playerTwoState) {
-    playerChecker.innerHTML =
-      "Please select a different icon for player 1 and/or 2.";
+    playerChecker.innerHTML = "";
     return;
   } else if (playerOneState !== playerTwoState) {
     playerChecker.innerHTML = "";
@@ -117,5 +116,5 @@ document
   .querySelectorAll(".cell")
   .forEach((cell) => cell.addEventListener("click", handleCellClick));
 document
-  .querySelector(".game--restart")
+  .querySelector(".game-restart")
   .addEventListener("click", handleRestartGame);

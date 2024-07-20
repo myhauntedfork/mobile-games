@@ -1,0 +1,115 @@
+body {
+  background-color: rgb(40, 40, 40);
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-touch-callout: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#game-section {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 2vw;
+  box-sizing: border-box;
+}
+
+.game--container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 10px;
+  grid-row-gap: 3px;
+}
+
+.cell {
+  width: 100%;
+  position: relative;
+  color: white;
+  border: 2px solid green;
+  cursor: pointer;
+  background-color: rgb(43, 43, 43);
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* For Android */
+  -webkit-touch-callout: none; /* For iOS Safari */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1; /* Maintain square aspect ratio */
+  font-size: 15vw;
+}
+
+.cell::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.cell > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  line-height: 1;
+}
+
+.game-restart {
+  width: 100%;
+  height: 40px;
+  background-color: green;
+  color: white;
+  border: 5px solid green;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* For Android */
+  -webkit-touch-callout: none; /* For iOS Safari */
+  margin-top: 2vh;
+}
+
+.game-restart:focus {
+  outline: none;
+}
+
+#game-container-box {
+  background-color: rgb(50, 50, 50);
+  margin: auto;
+  padding: 5vh;
+  padding-right: 5vh;
+  border: 2px solid green;
+  font-family: Arial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#player-icon-selector {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.game--status {
+  margin-top: 5vh;
+  color: white;
+}
+
+#game-status-box {
+  background-color: rgb(50, 50, 50);
+}
+
+.game-title {
+  color: white;
+  margin-bottom: 20px;
+}
