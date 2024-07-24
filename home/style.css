@@ -2,7 +2,7 @@ body {
   background-color: rgb(43, 43, 43);
 }
 
-#tic-tac-toe {
+.game-links {
   text-decoration: none;
   color: white;
 }
@@ -13,4 +13,5 @@ body {
   border-radius: 10px;
   height: 40px;
   width: 100%;
+  margin-bottom: 10px;
 }

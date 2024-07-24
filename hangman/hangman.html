@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Games - Hangman</title>
+    <link rel="stylesheet" href="hangman.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <h1>Hangman</h1>
+      <div id="setup-container">
+        <label for="secret-word">Enter the secret word:</label>
+        <input type="text" id="secret-word" />
+        <button id="start-button">Start Game</button>
+      </div>
+      <div id="gameplay-container" class="hidden">
+        <p id="word-display"></p>
+        <p>Lives left: <span id="lives">10</span></p>
+        <input type="text" id="guess-input" maxlength="1" />
+        <button id="guess-button">Guess</button>
+        <p id="message"></p>
+      </div>
+    </div>
+    <script src="hangman.js"></script>
+  </body>
+</html>
