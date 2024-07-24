@@ -112,6 +112,8 @@ function handleRestartGame() {
   document.querySelectorAll(".cell").forEach((cell) => (cell.innerHTML = ""));
 }
 
+handleRestartGame();
+
 document
   .querySelectorAll(".cell")
   .forEach((cell) => cell.addEventListener("click", handleCellClick));

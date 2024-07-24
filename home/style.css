@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(43, 43, 43);
+}
+
+#tic-tac-toe {
+  text-decoration: none;
+  color: white;
+}
+
+.game-selection {
+  background-color: green;
+  border: 2px solid green;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+}
