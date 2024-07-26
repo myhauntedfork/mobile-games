@@ -10,17 +10,23 @@
     <div id="game-container">
       <h1>Hangman</h1>
       <div id="setup-container">
-        <label for="secret-word">Enter the secret word:</label>
-        <input type="text" id="secret-word" />
-        <button id="start-button">Start Game</button>
+        <div>
+          <input type="text" id="secret-word" placeholder="secret word" />
+        </div>
+        <button id="start-button" class="options">Start Game</button>
       </div>
       <div id="gameplay-container" class="hidden">
         <p id="word-display"></p>
         <p>Lives left: <span id="lives">10</span></p>
         <input type="text" id="guess-input" maxlength="1" />
-        <button id="guess-button">Guess</button>
+        <div>
+          <button id="guess-button" class="options">Guess</button>
+        </div>
         <p id="message"></p>
       </div>
+      <button class="options">
+        <a href="../home/index.html" class="option-link">Back to Menu</a>
+      </button>
     </div>
     <script src="hangman.js"></script>
   </body>

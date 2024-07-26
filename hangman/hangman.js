@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function checkGameStatus() {
     if (lives <= 0) {
-      messageDisplay.textContent = `Sorry, you ran out of lives. The word was '${secretWord}'.`;
+      messageDisplay.textContent = `Out of lives. The word was '${secretWord}'.`;
       guessButton.disabled = true;
       guessInput.disabled = true;
     } else if (
