@@ -12,9 +12,13 @@ body {
 #game-container {
     text-align: center;
     background-color: rgb(50, 50, 50);
-    padding: 20px;
+    padding: 5vh;
     border: 2px solid green;
     margin: 4vh;
+    height: 70%;
+    width: 80%;
+    padding-top: 10vh;
+    padding-bottom: 0px;
 }
 
 .hidden {
@@ -54,4 +58,28 @@ body {
 .option-link {
     text-decoration: none;
     color: white;
+}
+
+#guess-input {
+    width: 20vh;
+    height: 5vh;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-bottom: 2px solid grey;
+    color: white;
+    text-align: center;
+    font-size: 4vh;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    outline: none;
+}
+
+h1 {
+    font-size: 6vh;
+}
+
+#life-count {
+    font-size: 3vh;
 }

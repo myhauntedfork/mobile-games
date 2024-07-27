@@ -21,13 +21,23 @@
             </div>
             <div id="gameplay-container" class="hidden">
                 <p id="word-display"></p>
-                <p>Lives left: <span id="lives">10</span></p>
-                <input type="text" id="guess-input" maxlength="1" />
+                <p id="life-count">Lives left: <span id="lives">10</span></p>
+                <input
+                    type="text"
+                    id="guess-input"
+                    maxlength="1"
+                    placeholder="your guess"
+                />
                 <div>
                     <button id="guess-button" class="options">Guess</button>
                 </div>
                 <p id="message"></p>
             </div>
+            <button class="options hidden" id="restart-button">
+                <a href="../hangman/hangman.html" class="option-link"
+                    >Restart</a
+                >
+            </button>
             <button class="options">
                 <a href="../home/index.html" class="option-link"
                     >Back to Menu</a

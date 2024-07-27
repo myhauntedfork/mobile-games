@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageDisplay = document.getElementById('message');
     const setupContainer = document.getElementById('setup-container');
     const gameplayContainer = document.getElementById('gameplay-container');
+    const restartButton = document.getElementById('restart-button');
 
     let secretWord = '';
     let guessedLetters = new Set();
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (secretWord) {
             setupContainer.classList.add('hidden');
             gameplayContainer.classList.remove('hidden');
+            restartButton.classList.remove('hidden');
             updateWordDisplay();
         }
     });
