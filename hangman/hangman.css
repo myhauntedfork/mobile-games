@@ -61,11 +61,12 @@ body {
 }
 
 #guess-input {
-    width: 20vh;
+    width: 25vh;
     height: 5vh;
     background-color: transparent;
     border: 2px solid transparent;
     border-bottom: 2px solid grey;
+    border-top: 2px solid grey;
     color: white;
     text-align: center;
     font-size: 4vh;
@@ -74,6 +75,7 @@ body {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     outline: none;
+    padding-bottom: 4px;
 }
 
 h1 {
