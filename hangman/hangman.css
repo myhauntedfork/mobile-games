@@ -50,8 +50,8 @@ body {
     position: relative;
     cursor: pointer;
     outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* For Android */
-    -webkit-touch-callout: none; /* For iOS Safari */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
     margin-top: 2vh;
 }
 
@@ -71,9 +71,9 @@ body {
     text-align: center;
     font-size: 4vh;
     user-select: none;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     outline: none;
     padding-bottom: 4px;
 }
