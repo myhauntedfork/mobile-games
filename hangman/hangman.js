@@ -9,17 +9,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const setupContainer = document.getElementById('setup-container');
     const gameplayContainer = document.getElementById('gameplay-container');
     const restartButton = document.getElementById('restart-button');
+    const lifeSlider = document.getElementById('life-slider');
+    const lifeValueDisplay = document.getElementById('life-value');
 
     let secretWord = '';
     let guessedLetters = new Set();
     let lives = 10;
 
+    lifeSlider.addEventListener('input', () => {
+        lifeValueDisplay.textContent = lifeSlider.value;
+    });
+
     startButton.addEventListener('click', () => {
         secretWord = secretWordInput.value.toLowerCase();
+        lives = parseInt(lifeSlider.value, 10);
         if (secretWord) {
             setupContainer.classList.add('hidden');
             gameplayContainer.classList.remove('hidden');
             restartButton.classList.remove('hidden');
+            livesDisplay.textContent = lives;
             updateWordDisplay();
         }
     });

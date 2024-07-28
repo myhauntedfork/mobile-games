@@ -17,11 +17,22 @@
                         placeholder="secret word"
                     />
                 </div>
+                <div>
+                    <label for="life-slider">Lives: </label>
+                    <span id="life-value">6</span>
+                    <input
+                        type="range"
+                        id="life-slider"
+                        min="1"
+                        max="12"
+                        value="6"
+                    />
+                </div>
                 <button id="start-button" class="options">Start Game</button>
             </div>
             <div id="gameplay-container" class="hidden">
                 <p id="word-display"></p>
-                <p id="life-count">Lives left: <span id="lives">10</span></p>
+                <p id="life-count">Lives left: <span id="lives"></span></p>
                 <input
                     type="text"
                     id="guess-input"

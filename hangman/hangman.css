@@ -85,3 +85,33 @@ h1 {
 #life-count {
     font-size: 3vh;
 }
+
+#life-slider {
+    width: 80%;
+    margin: 20px 0;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50px;
+    background: rgb(43, 43, 43);
+    border: 2px solid green;
+    touch-action: none;
+    user-select: none;
+}
+
+#life-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: green;
+    overflow: visible;
+    cursor: pointer;
+}
+
+#life-value {
+    font-weight: bold;
+}
+
+#secret-word {
+    margin-bottom: 2vh;
+}
