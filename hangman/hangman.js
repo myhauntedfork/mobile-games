@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const wordDisplay = document.getElementById('word-display');
     const livesDisplay = document.getElementById('lives');
     const guessInput = document.getElementById('guess-input');
-    const messageDisplay = document.getElementById('message');
     const setupContainer = document.getElementById('setup-container');
     const gameplayContainer = document.getElementById('gameplay-container');
     const restartButton = document.getElementById('restart-button');
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let secretWord = '';
     let guessedLetters = new Set();
-    let lives = 10;
 
     lifeSlider.addEventListener('input', () => {
         lifeValueDisplay.textContent = lifeSlider.value;
@@ -22,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startButton.addEventListener('click', () => {
         secretWord = secretWordInput.value.toLowerCase();
-        lives = parseInt(lifeSlider.value, 10);
+        lives = parseInt(lifeSlider.value);
         if (secretWord) {
             setupContainer.classList.add('hidden');
             gameplayContainer.classList.remove('hidden');
@@ -55,13 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkGameStatus() {
         if (lives <= 0) {
-            messageDisplay.textContent = `Out of lives. The word was '${secretWord}'.`;
+            livesDisplay.innerHTML = `Out of lives. The word was<br>'${secretWord}'`;
             guessButton.disabled = true;
             guessInput.disabled = true;
         } else if (
             Array.from(secretWord).every((letter) => guessedLetters.has(letter))
         ) {
-            messageDisplay.textContent = 'You guessed the secret word!';
+            livesDisplay.textContent = 'You guessed the secret word!';
             guessButton.disabled = true;
             guessInput.disabled = true;
         }
