@@ -3,11 +3,13 @@
 /* ======================================================================== */
 
 :root {
-    --background-color: rgb(159, 158, 158);
+    --background-color: rgb(200, 200, 200);
     --text-color: black;
     --button-text-color: white;
-    --primary-color: rgb(189, 189, 189);
-    --secondary-color: blue;
+    --primary-color: rgb(224, 222, 222);
+    --secondary-color: rgb(65, 105, 225);
+
+    --theme-switch-border: rgb(65, 105, 225);
 }
 
 [data-theme='dark'] {
@@ -16,6 +18,8 @@
     --button-text-color: white;
     --primary-color: rgb(50, 50, 50);
     --secondary-color: green;
+
+    --theme-switch-border: transparent;
 }
 
 /* ======================================================================== */
@@ -46,6 +50,8 @@
     width: 60px;
     height: 34px;
     user-select: none;
+    border: 1px solid var(--theme-switch-border);
+    border-radius: 50px;
 }
 
 #theme-switch input {
@@ -85,6 +91,18 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(26px);
+}
+
+#dark-theme-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-right: 1vh;
+}
+
+#dark-theme-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vh;
 }
 
 /* ======================================================================== */
