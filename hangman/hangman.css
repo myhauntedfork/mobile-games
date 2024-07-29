@@ -93,7 +93,7 @@ h1 {
     appearance: none;
     border-radius: 50px;
     background: rgb(43, 43, 43);
-    border: 2px solid green;
+    border: 1px solid green;
     touch-action: none;
     user-select: none;
 }
@@ -114,4 +114,8 @@ h1 {
 
 #secret-word {
     margin-bottom: 2vh;
+    background-color: rgb(43, 43, 43);
+    user-select: none;
+    color: white;
+    border: 1px solid green;
 }

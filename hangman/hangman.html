@@ -2,7 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+            maximum-scale="1.0"
+            user-scalable="0"
+        />
         <title>Mobile Games - Hangman</title>
         <link rel="stylesheet" href="hangman.css" />
     </head>
@@ -20,13 +25,15 @@
                 <div>
                     <label for="life-slider">Lives: </label>
                     <span id="life-value">6</span>
-                    <input
-                        type="range"
-                        id="life-slider"
-                        min="1"
-                        max="12"
-                        value="6"
-                    />
+                    <div>
+                        <input
+                            type="range"
+                            id="life-slider"
+                            min="1"
+                            max="12"
+                            value="6"
+                        />
+                    </div>
                 </div>
                 <button id="start-button" class="options">Start Game</button>
             </div>
