@@ -1,13 +1,13 @@
-let playerTwoState = 'O';
-const player2 = document.getElementById('player2');
-player2.addEventListener('change', function (e) {
-    playerTwoState = e.target.value;
-});
-
 let playerOneState = 'X';
 const player1 = document.getElementById('player1');
 player1.addEventListener('change', function (e) {
     playerOneState = e.target.value;
+});
+
+let playerTwoState = 'O';
+const player2 = document.getElementById('player2');
+player2.addEventListener('change', function (e) {
+    playerTwoState = e.target.value;
 });
 
 const playerChecker = document.getElementById('check-players');
@@ -27,8 +27,6 @@ const currentPlayerTurn = () => `it's ${currentPlayer}'s turn.`;
 statusDisplay.innerHTML = currentPlayerTurn() || '';
 
 function handleCellPlayed(clickedCell, clickedCellIndex) {
-    console.log(playerOneState, currentPlayer);
-
     gameState[clickedCellIndex] = currentPlayer;
     clickedCell.innerHTML = currentPlayer;
 }
