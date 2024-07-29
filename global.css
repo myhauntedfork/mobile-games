@@ -1,0 +1,354 @@
+/* ======================================================================== */
+/* ******************************* Global Colors ************************** */
+/* ======================================================================== */
+
+:root {
+    --background-color: rgb(159, 158, 158);
+    --text-color: black;
+    --button-text-color: white;
+    --primary-color: rgb(189, 189, 189);
+    --secondary-color: blue;
+}
+
+[data-theme='dark'] {
+    --background-color: rgb(43, 43, 43);
+    --text-color: white;
+    --button-text-color: white;
+    --primary-color: rgb(50, 50, 50);
+    --secondary-color: green;
+}
+
+/* ======================================================================== */
+/* ******************************* Home *********************************** */
+/* ======================================================================== */
+#home--body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.game-links {
+    text-decoration: none;
+    color: var(--button-text-color);
+}
+
+.game-selection {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    user-select: none;
+}
+
+#theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+    user-select: none;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--secondary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* ======================================================================== */
+/* ******************************* Tic Tac Toe **************************** */
+/* ======================================================================== */
+#tic-tac-toe--body {
+    background-color: var(--background-color);
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-touch-callout: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#game-section {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 2vw;
+    box-sizing: border-box;
+}
+
+.game--container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 10px;
+    grid-row-gap: 3px;
+}
+
+.cell {
+    width: 100%;
+    position: relative;
+    color: var(--text-color);
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+    background-color: var(--background-color);
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* For Android */
+    -webkit-touch-callout: none; /* For iOS Safari */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1; /* Maintain square aspect ratio */
+    font-size: 15vw;
+}
+
+.cell::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.cell > div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    line-height: 1;
+}
+
+.game-restart {
+    width: 100%;
+    height: 40px;
+    background-color: var(--secondary-color);
+    color: var(--button-text-color);
+    border: 5px solid var(--secondary-color);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* For Android */
+    -webkit-touch-callout: none; /* For iOS Safari */
+    margin-top: 2vh;
+}
+
+.game-restart:focus {
+    outline: none;
+}
+
+#game-container-box {
+    background-color: var(--primary-color);
+    margin: auto;
+    padding: 5vh;
+    padding-right: 5vh;
+    border: 2px solid var(--secondary-color);
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player-icon-selector {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.game--status {
+    margin-top: 5vh;
+    color: var(--text-color);
+}
+
+#game-status-box {
+    background-color: var(--primary-color);
+}
+
+.game-title {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+#menu-button {
+    text-decoration: none;
+    color: var(--button-text-color);
+}
+
+.winning-cell {
+    animation: winningAnimation 1s;
+}
+
+@keyframes winningAnimation {
+    0% {
+        background-color: var(--background-color);
+    }
+    50% {
+        background-color: var(--secondary-color);
+    }
+    100% {
+        background-color: var(--background-color);
+    }
+}
+
+/* ======================================================================== */
+/* ******************************* Hangman ******************************** */
+/* ======================================================================== */
+
+#hangman--body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    margin: 0;
+    color: var(--text-color);
+}
+
+#game-container {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 5vh;
+    border: 2px solid var(--secondary-color);
+    margin: 4vh;
+    height: 70%;
+    width: 80%;
+    padding-top: 10vh;
+    padding-bottom: 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+#word-display {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+#lives {
+    font-weight: bold;
+}
+
+#message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.options {
+    width: 100%;
+    height: 40px;
+    background-color: var(--secondary-color);
+    color: var(--button-text-color);
+    border: 5px solid var(--secondary-color);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    margin-top: 2vh;
+}
+
+.option-link {
+    text-decoration: none;
+    color: var(--button-text-color);
+}
+
+#guess-input {
+    width: 25vh;
+    height: 5vh;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-bottom: 2px solid grey;
+    border-top: 2px solid grey;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 4vh;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    outline: none;
+    padding-bottom: 4px;
+}
+
+#hangman-title {
+    font-size: 6vh;
+}
+
+#life-count {
+    font-size: 3vh;
+}
+
+#life-slider {
+    width: 80%;
+    margin: 20px 0;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50px;
+    background: var(--background-color);
+    border: 2px solid var(--secondary-color);
+    touch-action: none;
+    user-select: none;
+}
+
+#life-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    overflow: visible;
+    cursor: pointer;
+}
+
+#life-value {
+    font-weight: bold;
+}
+
+#secret-word {
+    margin-bottom: 2vh;
+    background-color: var(--background-color);
+    user-select: none;
+    color: var(--text-color);
+    border: 2px solid var(--secondary-color);
+}
