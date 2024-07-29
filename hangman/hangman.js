@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setupContainer.classList.add('hidden');
             gameplayContainer.classList.remove('hidden');
             restartButton.classList.remove('hidden');
-            livesDisplay.textContent = lives;
+            livesDisplay.innerHTML = `Lives: ${lives}`;
             updateWordDisplay();
         }
     });
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             guessedLetters.add(guess);
             if (!secretWord.includes(guess)) {
                 lives--;
-                livesDisplay.textContent = lives;
+                livesDisplay.innerHTML = `Lives: ${lives}`;
             }
             updateWordDisplay();
             checkGameStatus();
