@@ -50,6 +50,7 @@ const winningConditions = [
 
 function handleResultValidation() {
     let roundWon = false;
+    let winningCells = [];
     for (let i = 0; i <= 7; i++) {
         const winCondition = winningConditions[i];
         let a = gameState[winCondition[0]];
@@ -60,6 +61,7 @@ function handleResultValidation() {
         }
         if (a === b && b === c) {
             roundWon = true;
+            winningCells = winCondition;
             break;
         }
     }
@@ -67,6 +69,11 @@ function handleResultValidation() {
     if (roundWon) {
         statusDisplay.innerHTML = winningMessage();
         gameActive = false;
+        winningCells.forEach((index) => {
+            document
+                .querySelector(`[data-cell-index="${index}"]`)
+                .classList.add('winning-cell');
+        });
         return;
     }
 
@@ -107,7 +114,10 @@ function handleRestartGame() {
     currentPlayer = playerOneState;
     gameState = ['', '', '', '', '', '', '', '', ''];
     statusDisplay.innerHTML = currentPlayerTurn();
-    document.querySelectorAll('.cell').forEach((cell) => (cell.innerHTML = ''));
+    document.querySelectorAll('.cell').forEach((cell) => {
+        cell.innerHTML = '';
+        cell.classList.remove('winning-cell');
+    });
 }
 
 handleRestartGame();
