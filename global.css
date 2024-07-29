@@ -316,8 +316,6 @@ input:checked + .slider:before {
     height: 5vh;
     background-color: transparent;
     border: 2px solid transparent;
-    border-bottom: 2px solid grey;
-    border-top: 2px solid grey;
     color: var(--text-color);
     text-align: center;
     font-size: 4vh;
@@ -326,7 +324,6 @@ input:checked + .slider:before {
     -moz-user-select: none;
     -ms-user-select: none;
     outline: none;
-    padding-bottom: 4px;
 }
 
 #hangman-title {
@@ -369,4 +366,15 @@ input:checked + .slider:before {
     user-select: none;
     color: var(--text-color);
     border: 2px solid var(--secondary-color);
+}
+
+.fade-line {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(211, 211, 211, 0) 0%,
+        rgb(137, 137, 137) 50%,
+        rgba(211, 211, 211, 0) 100%
+    );
 }
