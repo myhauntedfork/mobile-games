@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const guessInput = document.getElementById('guess-input');
     const setupContainer = document.getElementById('setup-container');
     const gameplayContainer = document.getElementById('gameplay-container');
+    const restartButton = document.getElementById('restart-button');
     const lifeSlider = document.getElementById('life-slider');
     const lifeValueDisplay = document.getElementById('life-value');
 
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (secretWord) {
             setupContainer.classList.add('hidden');
             gameplayContainer.classList.remove('hidden');
+            restartButton.classList.remove('hidden');
             livesDisplay.innerHTML = `Lives: ${lives}`;
             guessedLetters = new Set();
             updateWordDisplay();
