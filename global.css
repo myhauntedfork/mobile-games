@@ -1,5 +1,5 @@
 /* ======================================================================== */
-/* ******************************* Global Colors ************************** */
+/* ************************** ⬇︎ Global Colors ⬇︎ ************************** */
 /* ======================================================================== */
 
 :root {
@@ -23,8 +23,9 @@
 }
 
 /* ======================================================================== */
-/* ******************************* Home *********************************** */
+/* ******************************* ⬇︎ Home ⬇︎ ****************************** */
 /* ======================================================================== */
+
 #home--body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -33,6 +34,14 @@
 .game-links {
     text-decoration: none;
     color: var(--button-text-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .game-selection {
@@ -42,6 +51,9 @@
     height: 40px;
     width: 100%;
     margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
 }
 
 #theme-switch {
@@ -52,6 +64,8 @@
     user-select: none;
     border: 1px solid var(--theme-switch-border);
     border-radius: 50px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* For Android */
+    -webkit-touch-callout: none; /* For iOS Safari */
 }
 
 #theme-switch input {
@@ -106,8 +120,9 @@ input:checked + .slider:before {
 }
 
 /* ======================================================================== */
-/* ******************************* Tic Tac Toe **************************** */
+/* ************************** ⬇︎ Tic Tac Toe ⬇︎ **************************** */
 /* ======================================================================== */
+
 #tic-tac-toe--body {
     background-color: var(--background-color);
     touch-action: manipulation;
@@ -151,7 +166,7 @@ input:checked + .slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1; /* Maintain square aspect ratio */
+    aspect-ratio: 1;
     font-size: 15vw;
 }
 
@@ -187,6 +202,8 @@ input:checked + .slider:before {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* For Android */
     -webkit-touch-callout: none; /* For iOS Safari */
     margin-top: 2vh;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .game-restart:focus {
@@ -224,9 +241,17 @@ input:checked + .slider:before {
     margin-bottom: 20px;
 }
 
-#menu-button {
+#tic-tac-toe--menu-button {
     text-decoration: none;
     color: var(--button-text-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .winning-cell {
@@ -246,7 +271,7 @@ input:checked + .slider:before {
 }
 
 /* ======================================================================== */
-/* ******************************* Hangman ******************************** */
+/* ***************************** ⬇︎ Hangman ⬇︎ ***************************** */
 /* ======================================================================== */
 
 #hangman--body {
@@ -306,9 +331,17 @@ input:checked + .slider:before {
     margin-top: 2vh;
 }
 
-.option-link {
+.hangman-option-link {
     text-decoration: none;
     color: var(--button-text-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #guess-input {
@@ -377,4 +410,10 @@ input:checked + .slider:before {
         rgb(137, 137, 137) 50%,
         rgba(211, 211, 211, 0) 100%
     );
+}
+
+.hangman-game-options {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
 }
