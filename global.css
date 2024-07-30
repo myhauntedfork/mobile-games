@@ -303,10 +303,12 @@ input:checked + .slider:before {
     font-size: 24px;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 #lives {
     font-weight: bold;
+    color: var(--text-color);
 }
 
 #message {
