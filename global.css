@@ -3,11 +3,11 @@
 /* ======================================================================== */
 
 :root {
-    --background-color: rgb(200, 200, 200);
+    --background-color: #ddd;
     --text-color: black;
     --button-text-color: white;
-    --primary-color: rgb(224, 222, 222);
-    --secondary-color: rgb(65, 105, 225);
+    --primary-color: #fff;
+    --secondary-color: #007bff;
 
     --theme-switch-border: rgb(65, 105, 225);
 }
